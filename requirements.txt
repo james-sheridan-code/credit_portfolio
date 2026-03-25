@@ -6,6 +6,6 @@ matplotlib
 numpy
 typing
 pathlib
-sklearn
+scikit-learn
 xgboost
 shap
