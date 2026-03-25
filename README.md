@@ -25,7 +25,7 @@ Language: Python 3.13
 
 Frontend: Streamlit
 
-Data Analysis: Pandas, NumPy
+Data Analysis and modeling: Pandas, NumPy, SciKit-Learn
 
 Visualization: Matplotlib, Seaborn
 
