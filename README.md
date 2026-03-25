@@ -6,7 +6,7 @@
 
 Live Link: https://creditportfolio-profit.streamlit.app/
 
-## Overview:
+## 𓀛 Overview:
 
 An interactive deployment of a non-linear credit scoring model better modeling risk than traditional Logistic Regression.
 
@@ -19,7 +19,7 @@ Information Avaliable:
 - Expected annual profit from the client
 - What features lead to the client's probability of default
 
-## Tech Stack:
+## 🪠 Tech Stack:
 
 Language: Python 3.13
 
@@ -31,7 +31,7 @@ Visualization: Matplotlib, Seaborn
 
 Host: Streamlit Community Cloud
 
-## Financial Maths:
+## 📟 Financial Maths:
 
 Expected profit: $$E[P] = ((1 - PD) \cdot r \cdot EAD) - (PD \cdot LGD \cdot EAD)$$
 
@@ -39,7 +39,7 @@ Breakeven interest rate: $$r_b = \frac{LGD \cdot PD}{1 - PD}$$
 
 Interest rate (r): $$r = \text{Prime Rate} + \text{Risk Premium}$$
 
-## Installation
+## 💽 Installation
 
 1. Clone the repository:
 ```bash
