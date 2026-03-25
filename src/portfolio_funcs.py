@@ -49,17 +49,27 @@ def plot_expected_profit(thresholds, expected_profits, y_value, x_value, label='
     """
     Visualizes the portfolio profit curve.
     """
-    fig, ax = plt.subplots(figsize=(8, 5))
-    ax.plot(thresholds * 100, expected_profits, label="Expected Profit", linewidth=2)
-    ax.scatter(x_value * 100, y_value, color='red', s=100, zorder=5, label=label)
+    plt.style.use('dark_background')
+    fig, ax = plt.subplots(figsize=(8, 5), facecolor='#121212')
+    ax.set_facecolor('#121212')
+
+    # plot EP curve and the point of max profit
+    ax.plot(thresholds * 100, expected_profits, color='#89CFF0', linewidth=2, label="Expected Profit")
+    ax.scatter(x_value * 100, y_value, color='#FFB347', s=75, edgecolors='white', zorder=5, label=label)
     
-    ax.set_xlabel("PD Threshold (%)")
-    ax.set_ylabel("Expected Profit (R)")
+    # title
+    fig.suptitle("Portfolio Expected Profit vs. Policy Threshold", fontsize=16, fontweight='normal', color='white', x=0.2, ha='left', y=0.93)       
+    plt.subplots_adjust(top=0.85)
+    # axes labels
+    ax.set_xlabel("PD Threshold (%)", fontsize=14, labelpad=15)
+    ax.set_ylabel("Expected Profit (R)", fontsize=14, labelpad=15)
+    # y-axis units
     formatter = ticker.EngFormatter(unit='', places=1)
     ax.yaxis.set_major_formatter(formatter)
     ax.yaxis.get_offset_text().set_visible(False)
-    ax.set_title("Portfolio Expected Profit vs. Policy Threshold")
-    ax.grid(True, linestyle='--', alpha=0.6)
-    ax.legend()
+    # grid and legend
+    ax.grid(color='grey', linestyle='--', linewidth=0.5, alpha=0.2)
+    sns.despine(ax=ax, top=False, right=False)
+    ax.legend(frameon=False, loc='upper left')
     
     return fig
