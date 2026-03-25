@@ -4,6 +4,7 @@ Phase 2: Portfolio Engine
 
 import numpy as np
 import pandas as pd
+import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 from src.interest_funcs import calculate_risk_premium
