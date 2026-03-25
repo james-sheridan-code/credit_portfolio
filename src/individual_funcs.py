@@ -48,9 +48,20 @@ def get_shap_explanation(model_pipeline, input_df: pd.DataFrame):
     shap_values = explainer(processed_X)
     
     # 5. Plotting
-    fig = plt.figure(figsize=(10, 6))
+    plt.style.use('dark_background')
+    fig = plt.figure(figsize=(10, 6), facecolor='#121212')
+    ax = plt.gca()
+    ax.set_facecolor('#121212')
     shap.plots.waterfall(shap_values[0], show=False)
-    plt.title("Risk Driver Analysis")
+
+    for i in range(10): # black and grey alternating rows 
+        ax.axhline(y=i, color='grey', linestyle='--', linewidth=0.5, alpha=0.3, zorder=0)
+    for i in range(0, 10, 2):
+        ax.axhspan(i - 0.5, i + 0.5, color='#ffffff', alpha=0.03, zorder=0)
+
+    ax.tick_params(colors='white', labelsize=11)
+    ax.xaxis.label.set_color('white')
+    plt.title("Risk Driver Analysis: How Features Moved the Probability", fontsize=16, color='white', pad=30, loc='left', x = -0.3)
     plt.tight_layout()
     
     return fig
