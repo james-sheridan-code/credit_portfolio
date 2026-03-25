@@ -1,9 +1,15 @@
+![Python](https://img.shields.io/badge/python-3.13-blue?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/streamlit-FF4B4B?logo=streamlit&logoColor=white)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+
 ## CreditRisk: Non-Linear Loan Profitability & Portfolio Modeling
 
+Live Link: https://creditportfolio-profit.streamlit.app/
+
 An interactive deployment of a non-linear credit scoring model better modeling risk than traditional Logistic Regression.
+> User friendly
 
 ### Overview:
-This program allows for a simple and user friendly way to get information regarding individual and portfolio profits using a non-linear model.
 
 Information Avaliable:
 - Maximum portfolio profit
@@ -13,11 +19,6 @@ Information Avaliable:
 - The breakeven interest rate to charge them
 - Expected annual profit from the client
 - What features lead to the client's probability of default
-
-### Key Features:
-- Simple dropdown options for client features
-- Sliders for the Loss Given Default
-- Interactive graphs for portfolio profit and client's features
 
 ### Tech Stack:
 
