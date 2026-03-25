@@ -3,8 +3,9 @@
 An interactive deployment of a non-linear credit scoring model better modeling risk than traditional Logistic Regression.
 
 ### Overview:
-This program allows for a simple and user friendly way to get information regarding individual and portfolio profits using a non-linear model that beats the standard logistic regression modelling of credit. 
-You can see:
+This program allows for a simple and user friendly way to get information regarding individual and portfolio profits using a non-linear model.
+
+Information Avaliable:
 - Maximum portfolio profit
 - Profit maximising probability of default cutoff
 - Client's probability of default
@@ -19,15 +20,23 @@ You can see:
 - Interactive graphs for portfolio profit and client's features
 
 ### Tech Stack:
+
 Language: Python 3.13
+
 Frontend: Streamlit
+
 Data Analysis: Pandas, NumPy
+
 Visualization: Matplotlib, Seaborn
+
 Host: Streamlit Community Cloud
 
 ### Financial Maths:
+
 Expected profit: $$E[P] = ((1 - PD) \cdot r \cdot EAD) - (PD \cdot LGD \cdot EAD)$$
+
 Breakeven interest rate: $$r_b = \frac{LGD \cdot PD}{1 - PD}$$
+
 Interest rate (r): $$r = \text{Prime Rate} + \text{Risk Premium}$$
 
 ### Installation
