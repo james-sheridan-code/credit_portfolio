@@ -95,7 +95,7 @@ if __name__ == "__main__":
     pipeline = joblib.load(config.get_model_path())
     
     test_client = pd.DataFrame({
-        'Age': [33], 'Sex': ['male'], 'Job': ['skilled'], 'Housing': ['own'],
+        'Age': [33], 'Job': ['skilled'], 'Housing': ['own'],
         'Saving accounts': ['little'], 'Checking account': ['moderate'],
         'Credit amount': [5000], 'Duration': [12], 'Purpose': ['car']
     })
