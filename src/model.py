@@ -64,7 +64,7 @@ def build_pipeline(model_type: str = 'xgb') -> Pipeline:
     Constructs the full Pipeline: Engineering -> Preprocessing -> Model.
     """
     # Define feature groups
-    nominal_features = ['Housing', 'Purpose', 'Sex', 'Job']
+    nominal_features = ['Housing', 'Purpose', 'Job']
     ordinal_features = ['Saving accounts', 'Checking account']
     numeric_features = ['Age', 'Duration', 'Credit amount', 
                         'credit_per_age', 'credit_per_duration', 'age_duration_ratio']
