@@ -17,7 +17,8 @@ def load_assets():
     # Pipeline file contains: Engineering -> Preprocessing -> XGBoost
     model = joblib.load(config.get_model_path())
     # Test data for portfolio-wide visuals
-    test_data = pd.read_csv(config.get_data_path()).iloc[:200] 
+    full_data = pd.read_csv(config.get_data_path())
+    test_data = full_data.sample(n=200, random_state=0)
     return model, test_data
 
 model_pipeline, sample_df = load_assets()
