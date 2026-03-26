@@ -65,6 +65,9 @@ if selection == "Portfolio Analysis":
     with col2:
         fig = plot_expected_profit(thresholds, profits, max_p, opt_t)
         st.pyplot(fig)
+        st.caption(f"The portfolio consists of 200 potential loans with an average EAD of R{ead:,}. " \
+        f"The maximum expected profit is calcualted by only accepting loans with a probability of " \
+        f"default less than the cutoff. Portfolio value: R{ead*200:,}. Yield: {max_p*100/(ead*200):.2f}%")
 
 # ===============================================================================
 # --- Individual Assessment Window ---
