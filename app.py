@@ -84,7 +84,6 @@ elif selection == "Individual Assessment":
         c1, c2, c3 = st.columns(3)
         with c1:
             age = st.number_input("Age", 18, 100, 30)
-            sex = st.selectbox("Sex", ["male", "female"])
             job = st.selectbox("Job", ['unskilled and non-resident', 'unskilled and resident', 'skilled', 'highly skilled'])
         with c2:
             housing = st.selectbox("Housing", ['own', 'rent', 'free'])
@@ -98,7 +97,7 @@ elif selection == "Individual Assessment":
     # PREDICTION BRIDGE
 
     input_data = pd.DataFrame({
-        'Age': [age], 'Sex': [sex], 'Job': [job], 'Housing': [housing],
+        'Age': [age], 'Job': [job], 'Housing': [housing],
         'Saving accounts': [savings], 'Checking account': [checking],
         'Credit amount': [amount], 'Duration': [duration], 'Purpose': [purpose]
     })
