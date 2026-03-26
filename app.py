@@ -60,8 +60,10 @@ if selection == "Portfolio Analysis":
     k1.metric("Max Portfolio Profit", f"R {max_p:,.2f}")
     k2.metric("Optimal PD Cutoff", f"{opt_t*100:.2f}%")
 
-    fig = plot_expected_profit(thresholds, profits, max_p, opt_t)
-    st.pyplot(fig)
+    col1, col2, col3 = st.columns([1, 4, 1])
+    with col2:
+        fig = plot_expected_profit(thresholds, profits, max_p, opt_t)
+        st.pyplot(fig)
 
 # ===============================================================================
 # --- Individual Assessment Window ---
@@ -150,10 +152,12 @@ elif selection == "Individual Assessment":
     st.divider()
 
     # Features Driving Risk
-    st.subheader("Features Driving Risk")
-    fig = get_shap_explanation(model_pipeline, input_data)
-    st.pyplot(fig)
-    st.caption("The graph is measured in log-odds (f(x)), the starting point is the default log-odds. " \
-    "Movement to the right (red bars) indicate a greater chance of default, while movement to the left " \
-    "(blue bars) indicate a lower chance of default. The greatest " \
-    "effects on the client's probabiltiy of default (PD) are listed first.")
+    col1, col2, col3 = st.columns([1, 4, 1])
+    with col2:
+        st.subheader("Features Driving Risk")
+        fig = get_shap_explanation(model_pipeline, input_data)
+        st.pyplot(fig)
+        st.caption("The graph is measured in log-odds (f(x)), the starting point is the default log-odds. " \
+        "Movement to the right (red bars) indicate a greater chance of default, while movement to the left " \
+        "(blue bars) indicate a lower chance of default. The greatest " \
+        "effects on the client's probabiltiy of default (PD) are listed first.")
