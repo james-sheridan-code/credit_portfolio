@@ -45,6 +45,8 @@ def load_and_split_data(filepath: str) -> Tuple[pd.DataFrame, pd.DataFrame, pd.S
     
     if "index" in df.columns:
         df = df.drop("index", axis=1)
+    if "Sex" in df.columns:
+        df = df.drop("Sex", axis=1)
 
     # Clean the target variable
     df['Risk'] = df['Risk'].replace({'good': 0, 'bad': 1}).astype(int)
