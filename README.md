@@ -19,17 +19,17 @@ Information Avaliable:
 - Expected annual profit from the client
 - What features lead to the client's probability of default
 
+## Code Architecture
+
+![Architecture Diagram](docs/architecture.png)
+
 ## 🪠 Tech Stack:
 
-Language: Python 3.13
-
-Frontend: Streamlit
-
-Data Analysis and modeling: Pandas, NumPy, SciKit-Learn
-
-Visualization: Matplotlib, Seaborn
-
-Host: Streamlit Community Cloud
+- Language: Python 3.13
+- Frontend: Streamlit
+- Data Analysis and modeling: Pandas, NumPy, SciKit-Learn
+- Visualization: Matplotlib, Seaborn
+- Host: Streamlit Community Cloud
 
 ## 📟 Financial Maths:
 
